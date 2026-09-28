@@ -170,7 +170,7 @@ export default function Projects() {
                   {/* Primary Screenshot: Operational Dashboard */}
                   <div className="overflow-hidden bg-[#050505] border border-white/[0.06]">
                     <img
-                      src="/images/projects/carwash/carwash-dashboard.png"
+                      src="/images/projects/carwash/carwash-admin-dashboard.png"
                       alt="Carwash Management System Dashboard Operasional interface"
                       className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.01]"
                       loading="lazy"
@@ -181,7 +181,7 @@ export default function Projects() {
                   <div className="grid grid-cols-2 gap-2 mt-2">
                     <div className="border border-white/[0.06] p-1 bg-[#050505] overflow-hidden">
                       <img
-                        src="/images/projects/carwash/carwash-overview.png"
+                        src="/images/projects/carwash/carwash-customer-portal.png"
                         alt="Carwash Customer Portal interface"
                         className="w-full h-24 sm:h-28 object-cover object-top"
                         loading="lazy"
