@@ -1,5 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 
+interface JourneyMedia {
+  src: string
+  alt: string
+  caption: string
+}
+
 interface JourneyItem {
   id: string
   period: string
@@ -9,6 +15,7 @@ interface JourneyItem {
   description: string
   focus?: string
   meta?: string
+  media?: JourneyMedia[]
 }
 
 const JOURNEY_ITEMS: JourneyItem[] = [
@@ -21,6 +28,13 @@ const JOURNEY_ITEMS: JourneyItem[] = [
     description:
       'Developing full-stack web and mobile applications through structured learning, hands-on projects, and independent development.',
     focus: 'React · TypeScript · Node.js · Express · PostgreSQL · Prisma · React Native',
+    media: [
+      {
+        src: '/images/experience/hackerrank-javascript-basic.jpg',
+        alt: 'HackerRank Certificate of Accomplishment - JavaScript (Basic) for Wisnu Triandika',
+        caption: 'HackerRank · JavaScript (Basic)',
+      },
+    ],
   },
   {
     id: 'internship',
@@ -30,6 +44,18 @@ const JOURNEY_ITEMS: JourneyItem[] = [
     institution: 'Land Government Office',
     description:
       'Supported administrative data tasks using computers, including taking notes and scanning customer documents with office equipment.',
+    media: [
+      {
+        src: '/images/experience/pkl-activity-wisnu.jpg',
+        alt: 'Dokumentasi kegiatan operasional PKL di Kantor Pertanahan',
+        caption: 'Operasional Komputer & Scanning',
+      },
+      {
+        src: '/images/experience/sertifikat-prakerin-bpn.jpg',
+        alt: 'Sertifikat Praktik Kerja Industri (PRAKERIN) di Kantor Pertanahan',
+        caption: 'Sertifikat PRAKERIN BPN',
+      },
+    ],
   },
   {
     id: 'education',
@@ -176,6 +202,30 @@ export default function Experience() {
                     <span className="text-[11px] font-mono text-[#666666] tracking-widest uppercase block">
                       {item.meta}
                     </span>
+                  </div>
+                )}
+
+                {/* Experience Media / Certificate Preview Area */}
+                {item.media && item.media.length > 0 && (
+                  <div className="pt-5 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    {item.media.map((img) => (
+                      <div
+                        key={img.src}
+                        className="border border-white/[0.1] bg-[#0A0A0A] p-1.5 overflow-hidden group/media hover:border-white/25 transition-all duration-300"
+                      >
+                        <div className="overflow-hidden bg-[#050505] aspect-[4/3] flex items-center justify-center">
+                          <img
+                            src={img.src}
+                            alt={img.alt}
+                            className="w-full h-full object-cover transition-transform duration-300 group-hover/media:scale-105"
+                            loading="lazy"
+                          />
+                        </div>
+                        <span className="text-[9px] font-mono text-[#666666] tracking-wider uppercase block mt-1.5 px-0.5 truncate">
+                          {img.caption}
+                        </span>
+                      </div>
+                    ))}
                   </div>
                 )}
               </article>

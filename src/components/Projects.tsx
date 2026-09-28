@@ -158,62 +158,50 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Right Column: Visual Frame (Technical Operational Architecture) */}
+              {/* Right Column: Real Project Screenshot Showcase */}
               <div className="lg:col-span-6 w-full">
-                <div
-                  className="border border-white/[0.12] bg-[#0A0A0A] p-6 sm:p-8 relative font-mono text-xs select-none transition-all duration-300 group-hover:scale-[1.01] group-hover:border-white/20"
-                  aria-hidden="true"
-                >
-                  {/* Visual Header */}
-                  <div className="flex items-center justify-between pb-4 border-b border-white/[0.08] text-[10px] tracking-widest text-[#666666] uppercase">
-                    <span>OPS // WORKFLOW ENGINE</span>
-                    <span>WEB + MOBILE ECOSYSTEM</span>
+                <div className="border border-white/[0.12] bg-[#0A0A0A] p-2 sm:p-3 relative overflow-hidden transition-all duration-300 group-hover:border-white/25">
+                  {/* Top Bar Indicator */}
+                  <div className="flex items-center justify-between px-3 py-2 border-b border-white/[0.08] text-[10px] font-mono text-[#666666] uppercase tracking-wider mb-2">
+                    <span>SYS // OPERATIONAL DASHBOARD</span>
+                    <span>APEX COMMAND CENTER</span>
                   </div>
 
-                  {/* Active Orders Status Pipeline */}
-                  <div className="py-6 space-y-3">
-                    <div className="flex items-center justify-between text-[11px] pb-2 text-[#666666] uppercase tracking-wider border-b border-white/[0.05]">
-                      <span>Order Ref</span>
-                      <span>Service Type</span>
-                      <span>Pipeline</span>
-                    </div>
-
-                    <div className="flex items-center justify-between py-2 border-b border-white/[0.04] text-[11px]">
-                      <span className="text-[#F5F5F2]">CW-0821</span>
-                      <span className="text-[#A1A1A1] font-sans">Full Wash & Detail</span>
-                      <span className="text-white/80">IN PROGRESS</span>
-                    </div>
-
-                    <div className="flex items-center justify-between py-2 border-b border-white/[0.04] text-[11px]">
-                      <span className="text-[#F5F5F2]">CW-0822</span>
-                      <span className="text-[#A1A1A1] font-sans">Exterior Express</span>
-                      <span className="text-[#666666]">QUEUED</span>
-                    </div>
-
-                    <div className="flex items-center justify-between py-2 text-[11px]">
-                      <span className="text-[#F5F5F2]">CW-0823</span>
-                      <span className="text-[#A1A1A1] font-sans">Interior Sanitizing</span>
-                      <span className="text-white/90">COMPLETED</span>
-                    </div>
+                  {/* Primary Screenshot: Operational Dashboard */}
+                  <div className="overflow-hidden bg-[#050505] border border-white/[0.06]">
+                    <img
+                      src="/images/projects/carwash/carwash-dashboard.png"
+                      alt="Carwash Management System Dashboard Operasional interface"
+                      className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                      loading="lazy"
+                    />
                   </div>
 
-                  {/* Architecture Sync Grid */}
-                  <div className="grid grid-cols-2 gap-3 pt-4 border-t border-white/[0.08]">
-                    <div className="border border-white/[0.08] p-3 bg-white/[0.01]">
-                      <span className="text-[9px] text-[#666666] block mb-1">CLIENT APPLICATION</span>
-                      <p className="text-[11px] text-[#F5F5F2] font-sans">React Admin + Native App</p>
+                  {/* Secondary Thumbnails: Portal & Mobile */}
+                  <div className="grid grid-cols-2 gap-2 mt-2">
+                    <div className="border border-white/[0.06] p-1 bg-[#050505] overflow-hidden">
+                      <img
+                        src="/images/projects/carwash/carwash-overview.png"
+                        alt="Carwash Customer Portal interface"
+                        className="w-full h-24 sm:h-28 object-cover object-top"
+                        loading="lazy"
+                      />
+                      <span className="text-[9px] font-mono text-[#666666] tracking-wider uppercase block mt-1 px-1">
+                        Customer Portal
+                      </span>
                     </div>
 
-                    <div className="border border-white/[0.08] p-3 bg-white/[0.01]">
-                      <span className="text-[9px] text-[#666666] block mb-1">SERVER & STORAGE</span>
-                      <p className="text-[11px] text-[#F5F5F2] font-sans">Express + PostgreSQL</p>
+                    <div className="border border-white/[0.06] p-1 bg-[#050505] overflow-hidden">
+                      <img
+                        src="/images/projects/carwash/carwash-mobile.png"
+                        alt="Carwash Mobile Administrator app interface"
+                        className="w-full h-24 sm:h-28 object-cover object-top"
+                        loading="lazy"
+                      />
+                      <span className="text-[9px] font-mono text-[#666666] tracking-wider uppercase block mt-1 px-1">
+                        Mobile App View
+                      </span>
                     </div>
-                  </div>
-
-                  {/* Visual Footer */}
-                  <div className="pt-4 mt-2 flex items-center justify-between text-[9px] text-[#666666] tracking-wider uppercase">
-                    <span>SYSTEM COMPONENT MODEL</span>
-                    <span>VERIFIED STRUCTURE</span>
                   </div>
                 </div>
               </div>
@@ -294,34 +282,21 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Right Column: Visual Frame (Editorial Coffee Composition) */}
+              {/* Right Column: Real Project Screenshot Showcase */}
               <div className="lg:col-span-6 w-full">
-                <div
-                  className="border border-white/[0.12] bg-[#0A0A0A] p-6 sm:p-8 relative font-mono text-xs select-none transition-all duration-300 group-hover:scale-[1.01] group-hover:border-white/20"
-                  aria-hidden="true"
-                >
-                  <div className="flex items-center justify-between pb-4 border-b border-white/[0.08] text-[10px] tracking-widest text-[#666666] uppercase">
-                    <span>BRAND // EDITORIAL SHOWCASE</span>
-                    <span>EXPERIENTIAL UI</span>
+                <div className="border border-white/[0.12] bg-[#0A0A0A] p-2 sm:p-3 relative overflow-hidden transition-all duration-300 group-hover:border-white/25">
+                  <div className="flex items-center justify-between px-3 py-2 border-b border-white/[0.08] text-[10px] font-mono text-[#666666] uppercase tracking-wider mb-2">
+                    <span>BRAND // LANDING PAGE</span>
+                    <span>VERCEL PRODUCTION DEPLOYMENT</span>
                   </div>
 
-                  {/* Coffee Narrative Layout Simulation */}
-                  <div className="py-8 flex flex-col items-center justify-center text-center space-y-4">
-                    <span className="text-[10px] tracking-[0.25em] text-[#666666] uppercase">
-                      RONA // COFFEE & GROUNDS
-                    </span>
-                    <p className="font-editorial text-2xl md:text-3xl text-[#F5F5F2] max-w-xs leading-snug">
-                      Artisan Roastery & Warm Visual Storytelling
-                    </p>
-                    <div className="w-12 h-px bg-white/20" />
-                    <span className="text-[10px] text-[#A1A1A1] font-sans">
-                      Editorial Typographic Rhythm · Responsive Grid · Subtle Micro-interactions
-                    </span>
-                  </div>
-
-                  <div className="pt-4 border-t border-white/[0.08] flex items-center justify-between text-[9px] text-[#666666] tracking-wider uppercase">
-                    <span>DEPLOYMENT: VERCEL</span>
-                    <span>PRODUCTION ACTIVE</span>
+                  <div className="overflow-hidden bg-[#050505] border border-white/[0.06]">
+                    <img
+                      src="/images/projects/rona/rona-overview.png"
+                      alt="RONA Coffee & Grounds landing page interface"
+                      className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
               </div>
@@ -386,38 +361,21 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Right Column: Visual Frame (Curated Media Layout) */}
+              {/* Right Column: Real Project Screenshot Showcase */}
               <div className="lg:col-span-6 w-full">
-                <div
-                  className="border border-white/[0.12] bg-[#0A0A0A] p-6 sm:p-8 relative font-mono text-xs select-none transition-all duration-300 group-hover:scale-[1.01] group-hover:border-white/20"
-                  aria-hidden="true"
-                >
-                  <div className="flex items-center justify-between pb-4 border-b border-white/[0.08] text-[10px] tracking-widest text-[#666666] uppercase">
-                    <span>MEDIA // CURATED DIRECTORY</span>
-                    <span>PERSONAL ARCHIVE</span>
+                <div className="border border-white/[0.12] bg-[#0A0A0A] p-2 sm:p-3 relative overflow-hidden transition-all duration-300 group-hover:border-white/25">
+                  <div className="flex items-center justify-between px-3 py-2 border-b border-white/[0.08] text-[10px] font-mono text-[#666666] uppercase tracking-wider mb-2">
+                    <span>APP // WATCHLIST DIRECTORY</span>
+                    <span>REACT + TAILWIND</span>
                   </div>
 
-                  {/* Cinema Wireframe Grid Simulation */}
-                  <div className="py-6 grid grid-cols-3 gap-3">
-                    <div className="border border-white/[0.08] bg-white/[0.01] aspect-[2/3] flex flex-col justify-end p-2.5">
-                      <span className="text-[8px] text-[#666666] block">ARCHIVE #01</span>
-                      <span className="text-[9px] text-[#F5F5F2] font-sans truncate">Feature Film</span>
-                    </div>
-
-                    <div className="border border-white/[0.12] bg-white/[0.03] aspect-[2/3] flex flex-col justify-end p-2.5">
-                      <span className="text-[8px] text-white/60 block">SAVED</span>
-                      <span className="text-[9px] text-[#F5F5F2] font-sans truncate">Documentary</span>
-                    </div>
-
-                    <div className="border border-white/[0.08] bg-white/[0.01] aspect-[2/3] flex flex-col justify-end p-2.5">
-                      <span className="text-[8px] text-[#666666] block">QUEUE</span>
-                      <span className="text-[9px] text-[#F5F5F2] font-sans truncate">Mini Series</span>
-                    </div>
-                  </div>
-
-                  <div className="pt-4 border-t border-white/[0.08] flex items-center justify-between text-[9px] text-[#666666] tracking-wider uppercase">
-                    <span>SEARCH & FILTER ENGINE</span>
-                    <span>LOCAL PERSISTENCE</span>
+                  <div className="overflow-hidden bg-[#050505] border border-white/[0.06]">
+                    <img
+                      src="/images/projects/watchlist/watchlist-home.png"
+                      alt="WatchList movie collection interface"
+                      className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
               </div>
