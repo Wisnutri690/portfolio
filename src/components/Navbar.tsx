@@ -27,7 +27,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Lock scroll saat mobile menu terbuka
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden'
@@ -53,7 +52,6 @@ export default function Navbar() {
         }`}
       >
         <div className="editorial-container flex items-center justify-between">
-          {/* Brand */}
           <a
             href="#"
             className="text-sm tracking-[0.2em] font-semibold uppercase text-[#F5F5F2] hover:opacity-80 transition-opacity"
@@ -62,7 +60,6 @@ export default function Navbar() {
             Wisnu Tri
           </a>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8" aria-label="Main Navigation">
             {NAV_ITEMS.map((item) => (
               <a
@@ -75,7 +72,6 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Desktop CTA */}
           <div className="hidden md:block">
             <a
               href="#contact"
@@ -85,7 +81,6 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Menu Trigger */}
           <button
             type="button"
             onClick={() => setIsMobileMenuOpen(true)}
@@ -98,7 +93,6 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Navigation Drawer */}
       {isMobileMenuOpen && (
         <div
           className="fixed inset-0 bg-[#050505] z-50 md:hidden flex flex-col justify-between p-6"
@@ -106,7 +100,6 @@ export default function Navbar() {
           aria-modal="true"
           aria-label="Mobile Navigation Drawer"
         >
-          {/* Header Drawer */}
           <div className="flex items-center justify-between pb-6 border-b border-white/[0.12]">
             <span className="text-sm tracking-[0.2em] font-semibold uppercase text-[#F5F5F2]">
               Wisnu Tri
@@ -121,7 +114,6 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Nav Links */}
           <nav className="flex flex-col space-y-4 py-8" aria-label="Mobile Navigation Links">
             <span className="section-label mb-2">Navigation</span>
             {NAV_ITEMS.map((item, index) => (
@@ -137,7 +129,6 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Footer Drawer */}
           <div className="pt-6 border-t border-white/[0.12] space-y-4">
             <a
               href="#contact"

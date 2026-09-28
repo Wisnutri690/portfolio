@@ -105,10 +105,8 @@ export default function Experience() {
       aria-labelledby="experience-heading"
     >
       <div className="editorial-container relative">
-        {/* Top Section Divider */}
         <div className="editorial-divider mb-16 md:mb-20" aria-hidden="true" />
 
-        {/* Subtle Watermark 04 */}
         <span
           className="absolute -top-6 right-4 md:right-8 font-editorial text-8xl md:text-9xl text-white/[0.03] select-none pointer-events-none"
           aria-hidden="true"
@@ -116,9 +114,7 @@ export default function Experience() {
           04
         </span>
 
-        {/* Two-Column Editorial Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Heading & Intro */}
           <div className="lg:col-span-5 flex flex-col space-y-6 lg:sticky lg:top-28">
             <div
               data-reveal-id="journey-label"
@@ -149,7 +145,6 @@ export default function Experience() {
             </p>
           </div>
 
-          {/* Right Column: Editorial Timeline List */}
           <div className="lg:col-span-7 flex flex-col border-t border-white/[0.12]">
             {JOURNEY_ITEMS.map((item, index) => (
               <article
@@ -160,7 +155,6 @@ export default function Experience() {
                 }`}
                 style={{ transitionDelay: `${index * 90}ms` }}
               >
-                {/* Timeline Header: Period & Category Badge */}
                 <div className="flex items-center justify-between gap-4 mb-3">
                   <span className="font-mono text-xs tracking-wider text-[#A1A1A1]">
                     {item.period}
@@ -170,24 +164,20 @@ export default function Experience() {
                   </span>
                 </div>
 
-                {/* Title */}
                 <h3 className="font-editorial text-2xl md:text-3xl text-[#F5F5F2] font-medium leading-snug">
                   {item.title}
                 </h3>
 
-                {/* Organization / Context */}
                 {item.institution && (
                   <p className="text-xs uppercase tracking-[0.15em] text-[#A1A1A1] font-medium mt-1">
                     {item.institution}
                   </p>
                 )}
 
-                {/* Narrative Description */}
                 <p className="text-sm md:text-base text-[#A1A1A1] leading-relaxed mt-3 max-w-[580px]">
                   {item.description}
                 </p>
 
-                {/* Tech Stack Focus if available */}
                 {item.focus && (
                   <div className="pt-3">
                     <span className="text-[11px] font-mono text-[#666666] tracking-wide block">
@@ -196,7 +186,6 @@ export default function Experience() {
                   </div>
                 )}
 
-                {/* Extra Meta (e.g. Graduation date) */}
                 {item.meta && (
                   <div className="pt-3">
                     <span className="text-[11px] font-mono text-[#666666] tracking-widest uppercase block">
@@ -205,7 +194,6 @@ export default function Experience() {
                   </div>
                 )}
 
-                {/* Experience Media / Certificate Preview Area */}
                 {item.media && item.media.length > 0 && (
                   <div className="pt-5 grid grid-cols-2 sm:grid-cols-3 gap-3">
                     {item.media.map((img) => (
@@ -217,7 +205,7 @@ export default function Experience() {
                           <img
                             src={img.src}
                             alt={img.alt}
-                            className="w-full h-full object-cover transition-transform duration-300 group-hover/media:scale-105"
+                            className="w-full h-full object-cover transition-transform duration-300 group/media:scale-105"
                             loading="lazy"
                           />
                         </div>

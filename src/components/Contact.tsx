@@ -37,10 +37,8 @@ export default function Contact() {
       aria-labelledby="contact-heading"
     >
       <div className="editorial-container relative">
-        {/* Top Section Divider */}
         <div className="editorial-divider mb-16 md:mb-20" aria-hidden="true" />
 
-        {/* Subtle Watermark 05 */}
         <span
           className="absolute -top-6 right-4 md:right-8 font-editorial text-8xl md:text-9xl text-white/[0.03] select-none pointer-events-none"
           aria-hidden="true"
@@ -48,9 +46,7 @@ export default function Contact() {
           05
         </span>
 
-        {/* Two-Column Editorial Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Heading & Narrative */}
           <div className="lg:col-span-7 flex flex-col space-y-6">
             <div
               data-reveal-id="contact-label"
@@ -82,14 +78,12 @@ export default function Contact() {
             </p>
           </div>
 
-          {/* Right Column: Contact Details & Action Buttons */}
           <div
             data-reveal-id="contact-action"
             className={`lg:col-span-5 flex flex-col space-y-8 pt-4 lg:pt-14 reveal-init ${
               isVisible('contact-action') ? 'reveal-visible' : ''
             }`}
           >
-            {/* Direct Contact Information */}
             <div className="space-y-5 border-t border-white/[0.12] pt-6">
               <div className="flex flex-col space-y-1">
                 <span className="text-[11px] uppercase tracking-[0.15em] text-[#666666] font-medium">
@@ -113,7 +107,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* CTAs */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <a
                 href="mailto:wisnutri690@gmail.com"

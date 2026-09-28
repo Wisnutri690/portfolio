@@ -2,7 +2,6 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/[0.12] py-12 md:py-16 text-[#A1A1A1]">
       <div className="editorial-container flex flex-col md:flex-row md:items-center justify-between gap-8">
-        {/* Brand & Role */}
         <div className="space-y-1">
           <span className="text-xs sm:text-sm tracking-[0.2em] font-semibold uppercase text-[#F5F5F2] block">
             Wisnu Tri
@@ -12,7 +11,6 @@ export default function Footer() {
           </span>
         </div>
 
-        {/* Navigation Links */}
         <nav
           className="flex flex-wrap items-center gap-6 sm:gap-8 text-xs tracking-wider uppercase font-medium"
           aria-label="Footer Navigation Links"
@@ -44,7 +42,6 @@ export default function Footer() {
           </a>
         </nav>
 
-        {/* Copyright */}
         <div>
           <p className="text-xs text-[#666666] font-mono">
             © 2026 Wisnu Tri. Built with React.

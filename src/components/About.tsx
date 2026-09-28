@@ -30,10 +30,8 @@ export default function About() {
       aria-labelledby="about-heading"
     >
       <div className="editorial-container relative">
-        {/* Top Section Divider */}
         <div className="editorial-divider mb-16 md:mb-20" aria-hidden="true" />
 
-        {/* Subtle Watermark 01 */}
         <span
           className="absolute -top-6 right-4 md:right-8 font-editorial text-8xl md:text-9xl text-white/[0.03] select-none pointer-events-none"
           aria-hidden="true"
@@ -41,9 +39,7 @@ export default function About() {
           01
         </span>
 
-        {/* Content Grid: 2 columns on desktop */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Editorial Label & Large Headline */}
           <div className="lg:col-span-5 flex flex-col space-y-6">
             <div
               className={`reveal-init ${isVisible ? 'reveal-visible' : ''}`}
@@ -65,9 +61,7 @@ export default function About() {
             </h2>
           </div>
 
-          {/* Right Column: Narrative Copy & Editorial Metadata */}
           <div className="lg:col-span-7 flex flex-col justify-between space-y-10">
-            {/* Narrative Paragraph */}
             <p
               className={`text-[#A1A1A1] text-base md:text-lg leading-relaxed max-w-[620px] font-normal reveal-init ${
                 isVisible ? 'reveal-visible' : ''
@@ -80,7 +74,6 @@ export default function About() {
               authentication, and application architecture.
             </p>
 
-            {/* Editorial Divider */}
             <div
               className={`editorial-divider reveal-init ${
                 isVisible ? 'reveal-visible' : ''
@@ -89,14 +82,12 @@ export default function About() {
               aria-hidden="true"
             />
 
-            {/* Metadata Section */}
             <div
               className={`grid grid-cols-1 sm:grid-cols-3 gap-8 pt-2 reveal-init ${
                 isVisible ? 'reveal-visible' : ''
               }`}
               style={{ transitionDelay: '450ms' }}
             >
-              {/* Focus */}
               <div className="space-y-2">
                 <span className="text-[11px] uppercase tracking-[0.15em] text-[#666666] font-medium block">
                   Focus
@@ -106,7 +97,6 @@ export default function About() {
                 </p>
               </div>
 
-              {/* Current Stack */}
               <div className="space-y-2">
                 <span className="text-[11px] uppercase tracking-[0.15em] text-[#666666] font-medium block">
                   Current Stack
@@ -116,7 +106,6 @@ export default function About() {
                 </p>
               </div>
 
-              {/* Location */}
               <div className="space-y-2">
                 <span className="text-[11px] uppercase tracking-[0.15em] text-[#666666] font-medium block">
                   Location

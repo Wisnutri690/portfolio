@@ -37,10 +37,8 @@ export default function Projects() {
       aria-labelledby="projects-heading"
     >
       <div className="editorial-container relative">
-        {/* Top Section Divider */}
         <div className="editorial-divider mb-16 md:mb-20" aria-hidden="true" />
 
-        {/* Subtle Watermark 03 */}
         <span
           className="absolute -top-6 right-4 md:right-8 font-editorial text-8xl md:text-9xl text-white/[0.03] select-none pointer-events-none"
           aria-hidden="true"
@@ -48,7 +46,6 @@ export default function Projects() {
           03
         </span>
 
-        {/* Section Header */}
         <div
           data-reveal-id="header"
           className={`flex flex-col space-y-6 max-w-3xl mb-20 md:mb-28 reveal-init ${
@@ -67,11 +64,7 @@ export default function Projects() {
           </p>
         </div>
 
-        {/* Projects Stack */}
         <div className="flex flex-col space-y-24 md:space-y-36">
-          {/* ======================================================== */}
-          {/* PROJECT 01 — CARWASH MANAGEMENT SYSTEM (PRIMARY SHOWCASE) */}
-          {/* ======================================================== */}
           <article
             data-reveal-id="project-carwash"
             className={`group border-t border-white/[0.12] pt-12 md:pt-16 reveal-init ${
@@ -79,9 +72,7 @@ export default function Projects() {
             }`}
             aria-labelledby="carwash-title"
           >
-            {/* Project Overview Header */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start mb-12 md:mb-16">
-              {/* Left Column: Metadata & Title */}
               <div className="lg:col-span-6 flex flex-col space-y-4">
                 <span className="section-label">
                   01 / FULL STACK · WEB + MOBILE
@@ -101,7 +92,6 @@ export default function Projects() {
                 </p>
               </div>
 
-              {/* Right Column: Tech Stack & Repositories */}
               <div className="lg:col-span-6 flex flex-col space-y-6 lg:pt-8">
                 <div>
                   <span className="text-[11px] uppercase tracking-[0.15em] text-[#666666] font-medium block mb-2 font-mono">
@@ -161,9 +151,7 @@ export default function Projects() {
               </div>
             </div>
 
-            {/* Visual Showcase Gallery: Admin Dashboard & Mobile Customer/Admin */}
             <div className="flex flex-col space-y-8 md:space-y-12">
-              {/* 1. Primary Desktop Showcase: Operational Dashboard */}
               <div className="border border-white/[0.12] bg-[#0A0A0A] p-2 sm:p-4 transition-all duration-300 group-hover:border-white/20">
                 <div className="flex items-center justify-between px-3 py-2 border-b border-white/[0.08] text-[10px] font-mono text-[#666666] uppercase tracking-wider mb-3">
                   <span>01.1 // WEB ADMIN OPERATIONAL DASHBOARD</span>
@@ -183,7 +171,6 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* 2. Cross-Platform Mobile Applications: Customer & Administrator */}
               <div className="border border-white/[0.12] bg-[#0A0A0A] p-4 sm:p-6 transition-all duration-300 hover:border-white/25">
                 <div className="flex items-center justify-between border-b border-white/[0.08] pb-3 text-[10px] font-mono text-[#666666] uppercase tracking-wider mb-8">
                   <span>01.2 // CROSS-PLATFORM MOBILE APPLICATION</span>
@@ -191,7 +178,6 @@ export default function Projects() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 max-w-2xl mx-auto items-start">
-                  {/* Mobile Screen 1: Customer Portal Live Tracking */}
                   <div className="flex flex-col items-center">
                     <div className="border border-white/[0.08] bg-[#050505] p-2 w-full max-w-[280px] sm:max-w-[310px]">
                       <img
@@ -209,7 +195,6 @@ export default function Projects() {
                     </span>
                   </div>
 
-                  {/* Mobile Screen 2: Administrator Operational View */}
                   <div className="flex flex-col items-center">
                     <div className="border border-white/[0.08] bg-[#050505] p-2 w-full max-w-[280px] sm:max-w-[310px]">
                       <img
@@ -231,9 +216,6 @@ export default function Projects() {
             </div>
           </article>
 
-          {/* ======================================================== */}
-          {/* PROJECT 02 — RONA COFFEE & GROUNDS */}
-          {/* ======================================================== */}
           <article
             data-reveal-id="project-rona"
             className={`group border-t border-white/[0.12] pt-12 md:pt-16 reveal-init ${
@@ -242,7 +224,6 @@ export default function Projects() {
             aria-labelledby="rona-title"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-              {/* Left Column: Metadata, Title, Description, Tech, Links */}
               <div className="lg:col-span-6 flex flex-col space-y-6">
                 <span className="section-label">
                   02 / FRONTEND · LANDING PAGE
@@ -261,7 +242,6 @@ export default function Projects() {
                   subtle scroll-based interactions.
                 </p>
 
-                {/* Tech Stack List */}
                 <div className="pt-2">
                   <span className="text-[11px] uppercase tracking-[0.15em] text-[#666666] font-medium block mb-2">
                     Technologies
@@ -271,7 +251,6 @@ export default function Projects() {
                   </p>
                 </div>
 
-                {/* Repositories & Demo Links */}
                 <div className="pt-4 flex flex-wrap items-center gap-4">
                   <a
                     href="https://rona-coffee.vercel.app/"
@@ -305,7 +284,6 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Right Column: Real Project Screenshot Showcase */}
               <div className="lg:col-span-6 w-full">
                 <div className="border border-white/[0.12] bg-[#0A0A0A] p-2 sm:p-3 relative overflow-hidden transition-all duration-300 group-hover:border-white/25">
                   <div className="flex items-center justify-between px-3 py-2 border-b border-white/[0.08] text-[10px] font-mono text-[#666666] uppercase tracking-wider mb-2">
@@ -326,9 +304,6 @@ export default function Projects() {
             </div>
           </article>
 
-          {/* ======================================================== */}
-          {/* PROJECT 03 — WATCHLIST */}
-          {/* ======================================================== */}
           <article
             data-reveal-id="project-watchlist"
             className={`group border-t border-b border-white/[0.12] py-12 md:py-16 reveal-init ${
@@ -337,7 +312,6 @@ export default function Projects() {
             aria-labelledby="watchlist-title"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-              {/* Left Column: Metadata, Title, Description, Tech, Links */}
               <div className="lg:col-span-6 flex flex-col space-y-6">
                 <span className="section-label">
                   03 / FRONTEND · REACT
@@ -355,7 +329,6 @@ export default function Projects() {
                   and managing a personal collection of movies and shows.
                 </p>
 
-                {/* Tech Stack List */}
                 <div className="pt-2">
                   <span className="text-[11px] uppercase tracking-[0.15em] text-[#666666] font-medium block mb-2">
                     Technologies
@@ -365,7 +338,6 @@ export default function Projects() {
                   </p>
                 </div>
 
-                {/* Repositories Link */}
                 <div className="pt-4 flex flex-wrap items-center gap-4">
                   <a
                     href="https://github.com/Wisnutri690/Stage-2-Project-2-WatchList"
@@ -384,7 +356,6 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Right Column: Real Project Screenshot Showcase */}
               <div className="lg:col-span-6 w-full">
                 <div className="border border-white/[0.12] bg-[#0A0A0A] p-2 sm:p-3 relative overflow-hidden transition-all duration-300 group-hover:border-white/25">
                   <div className="flex items-center justify-between px-3 py-2 border-b border-white/[0.08] text-[10px] font-mono text-[#666666] uppercase tracking-wider mb-2">
