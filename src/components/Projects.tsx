@@ -79,9 +79,10 @@ export default function Projects() {
             }`}
             aria-labelledby="carwash-title"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-              {/* Left Column: Metadata, Title, Description, Tech, Links */}
-              <div className="lg:col-span-6 flex flex-col space-y-6">
+            {/* Project Overview Header */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start mb-12 md:mb-16">
+              {/* Left Column: Metadata & Title */}
+              <div className="lg:col-span-6 flex flex-col space-y-4">
                 <span className="section-label">
                   01 / FULL STACK · WEB + MOBILE
                 </span>
@@ -98,10 +99,12 @@ export default function Projects() {
                   customers, vehicles, orders, staff workflows, payments, and
                   operational status across web and mobile applications.
                 </p>
+              </div>
 
-                {/* Tech Stack List */}
-                <div className="pt-2">
-                  <span className="text-[11px] uppercase tracking-[0.15em] text-[#666666] font-medium block mb-2">
+              {/* Right Column: Tech Stack & Repositories */}
+              <div className="lg:col-span-6 flex flex-col space-y-6 lg:pt-8">
+                <div>
+                  <span className="text-[11px] uppercase tracking-[0.15em] text-[#666666] font-medium block mb-2 font-mono">
                     Technologies
                   </span>
                   <p className="text-xs sm:text-sm text-[#A1A1A1] font-mono leading-relaxed">
@@ -109,8 +112,7 @@ export default function Projects() {
                   </p>
                 </div>
 
-                {/* Repositories Links */}
-                <div className="pt-4 flex flex-wrap items-center gap-4">
+                <div className="flex flex-wrap items-center gap-3 pt-2">
                   <a
                     href="https://github.com/Wisnutri690/Carwash-Management-System-Frontend"
                     target="_blank"
@@ -157,51 +159,133 @@ export default function Projects() {
                   </a>
                 </div>
               </div>
+            </div>
 
-              {/* Right Column: Real Project Screenshot Showcase */}
-              <div className="lg:col-span-6 w-full">
-                <div className="border border-white/[0.12] bg-[#0A0A0A] p-2 sm:p-3 relative overflow-hidden transition-all duration-300 group-hover:border-white/25">
-                  {/* Top Bar Indicator */}
-                  <div className="flex items-center justify-between px-3 py-2 border-b border-white/[0.08] text-[10px] font-mono text-[#666666] uppercase tracking-wider mb-2">
-                    <span>SYS // OPERATIONAL DASHBOARD</span>
-                    <span>APEX COMMAND CENTER</span>
+            {/* Visual Showcase Gallery */}
+            <div className="flex flex-col space-y-8 md:space-y-12">
+              {/* 1. Primary Desktop Showcase: Operational Dashboard */}
+              <div className="border border-white/[0.12] bg-[#0A0A0A] p-2 sm:p-4 transition-all duration-300 group-hover:border-white/20">
+                <div className="flex items-center justify-between px-3 py-2 border-b border-white/[0.08] text-[10px] font-mono text-[#666666] uppercase tracking-wider mb-3">
+                  <span>01.1 // ADMIN OPERATIONAL DASHBOARD</span>
+                  <span>1440 × 900 · DESKTOP VIEWPORT</span>
+                </div>
+                <div className="bg-[#050505] border border-white/[0.06]">
+                  <img
+                    src="/images/projects/carwash/carwash-admin-dashboard.png"
+                    alt="Carwash Management System Admin Operational Dashboard showing revenue metrics, queue, and cashier controls"
+                    className="w-full h-auto object-contain block"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="px-3 py-2.5 mt-1 text-[11px] font-mono text-[#888888] flex flex-wrap items-center justify-between gap-2 border-t border-white/[0.04]">
+                  <span>Operational Command Center — Real-time queue status, today's revenue breakdown, staff assignments, and quick actions.</span>
+                  <span className="text-[#555555]">DESKTOP FULL</span>
+                </div>
+              </div>
+
+              {/* 2. Web Operational & Customer Workflows: 2-Column Grid */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-start">
+                {/* Admin Orders / Queue */}
+                <div className="border border-white/[0.12] bg-[#0A0A0A] p-2 sm:p-4 transition-all duration-300 hover:border-white/25">
+                  <div className="flex items-center justify-between px-3 py-2 border-b border-white/[0.08] text-[10px] font-mono text-[#666666] uppercase tracking-wider mb-3">
+                    <span>01.2 // ADMIN ORDERS & QUEUE</span>
+                    <span>1370 × 693 · CASHIER WORKFLOW</span>
                   </div>
-
-                  {/* Primary Screenshot: Operational Dashboard */}
-                  <div className="overflow-hidden bg-[#050505] border border-white/[0.06]">
+                  <div className="bg-[#050505] border border-white/[0.06]">
                     <img
-                      src="/images/projects/carwash/carwash-admin-dashboard.png"
-                      alt="Carwash Management System Dashboard Operasional interface"
-                      className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.01]"
+                      src="/images/projects/carwash/carwash-order.png"
+                      alt="Carwash Antrean Kasir interface showing vehicle queue cards and payment status"
+                      className="w-full h-auto object-contain block"
                       loading="lazy"
                     />
                   </div>
+                  <div className="px-3 py-2.5 mt-1 text-[11px] font-mono text-[#888888] border-t border-white/[0.04]">
+                    Antrean Kasir — Washing status progression (Menunggu, Dicuci, Selesai), technician dispatching, and billing.
+                  </div>
+                </div>
 
-                  {/* Secondary Thumbnails: Portal & Mobile */}
-                  <div className="grid grid-cols-2 gap-2 mt-2">
-                    <div className="border border-white/[0.06] p-1 bg-[#050505] overflow-hidden">
-                      <img
-                        src="/images/projects/carwash/carwash-customer-portal.png"
-                        alt="Carwash Customer Portal interface"
-                        className="w-full h-24 sm:h-28 object-cover object-top"
-                        loading="lazy"
-                      />
-                      <span className="text-[9px] font-mono text-[#666666] tracking-wider uppercase block mt-1 px-1">
-                        Customer Portal
-                      </span>
-                    </div>
+                {/* Customer Portal */}
+                <div className="border border-white/[0.12] bg-[#0A0A0A] p-2 sm:p-4 transition-all duration-300 hover:border-white/25">
+                  <div className="flex items-center justify-between px-3 py-2 border-b border-white/[0.08] text-[10px] font-mono text-[#666666] uppercase tracking-wider mb-3">
+                    <span>01.3 // CUSTOMER PORTAL</span>
+                    <span>1440 × 900 · CLIENT DASHBOARD</span>
+                  </div>
+                  <div className="bg-[#050505] border border-white/[0.06]">
+                    <img
+                      src="/images/projects/carwash/carwash-customer-portal.png"
+                      alt="Carwash Customer Portal interface showing registered Porsche 911 GT3 RS and active service ordering"
+                      className="w-full h-auto object-contain block"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="px-3 py-2.5 mt-1 text-[11px] font-mono text-[#888888] border-t border-white/[0.04]">
+                    APEX Studio Portal — Customer garage view, vehicle switching, and direct wash package selection.
+                  </div>
+                </div>
+              </div>
 
-                    <div className="border border-white/[0.06] p-1 bg-[#050505] overflow-hidden">
+              {/* 3. Detailing Service Catalog: Full Width */}
+              <div className="border border-white/[0.12] bg-[#0A0A0A] p-2 sm:p-4 transition-all duration-300 hover:border-white/25">
+                <div className="flex items-center justify-between px-3 py-2 border-b border-white/[0.08] text-[10px] font-mono text-[#666666] uppercase tracking-wider mb-3">
+                  <span>01.4 // SERVICE & DETAILING CATALOG</span>
+                  <span>1440 × 900 · SERVICE SELECTION</span>
+                </div>
+                <div className="bg-[#050505] border border-white/[0.06]">
+                  <img
+                    src="/images/projects/carwash/carwash-customer-service.png"
+                    alt="Carwash detailing services catalog interface showing multi-tier packages"
+                    className="w-full h-auto object-contain block"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="px-3 py-2.5 mt-1 text-[11px] font-mono text-[#888888] flex flex-wrap items-center justify-between gap-2 border-t border-white/[0.04]">
+                  <span>Pilihan Layanan — Detailing tiers from Hydro Foam Signature Wash to 9H Nano Ceramic Coating.</span>
+                  <span className="text-[#555555]">CATALOG VIEW</span>
+                </div>
+              </div>
+
+              {/* 4. Cross-Platform Mobile Experience: React Native */}
+              <div className="border border-white/[0.12] bg-[#0A0A0A] p-4 sm:p-6 transition-all duration-300 hover:border-white/25">
+                <div className="flex items-center justify-between border-b border-white/[0.08] pb-3 text-[10px] font-mono text-[#666666] uppercase tracking-wider mb-8">
+                  <span>01.5 // CROSS-PLATFORM MOBILE APPLICATION</span>
+                  <span>REACT NATIVE · PORTRAIT INTERFACE</span>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 max-w-2xl mx-auto items-start">
+                  {/* Mobile Screen 1: Vehicle & Service Selector */}
+                  <div className="flex flex-col items-center">
+                    <div className="border border-white/[0.08] bg-[#050505] p-2 w-full max-w-[280px] sm:max-w-[310px]">
                       <img
                         src="/images/projects/carwash/carwash-mobile.png"
-                        alt="Carwash Mobile Administrator app interface"
-                        className="w-full h-24 sm:h-28 object-cover object-top"
+                        alt="Carwash Mobile Application interface showing vehicle selector and service packages"
+                        className="w-full h-auto object-contain block mx-auto"
                         loading="lazy"
                       />
-                      <span className="text-[9px] font-mono text-[#666666] tracking-wider uppercase block mt-1 px-1">
-                        Mobile App View
-                      </span>
                     </div>
+                    <span className="text-xs font-mono text-[#F5F5F2] tracking-wider uppercase mt-4 text-center">
+                      Mobile Service & Garage
+                    </span>
+                    <span className="text-[11px] text-[#888888] text-center mt-1 max-w-[260px]">
+                      Customer interface for garage vehicle switching and instant package selection.
+                    </span>
+                  </div>
+
+                  {/* Mobile Screen 2: Live Tracking on iPhone Frame */}
+                  <div className="flex flex-col items-center">
+                    <div className="border border-white/[0.08] bg-[#050505] p-2 w-full max-w-[280px] sm:max-w-[310px]">
+                      <img
+                        src="/images/projects/carwash/iPhone-14-PRO-localhost.png"
+                        alt="Carwash Mobile Live Tracking status interface on iPhone 14 Pro"
+                        className="w-full h-auto object-contain block mx-auto"
+                        loading="lazy"
+                      />
+                    </div>
+                    <span className="text-xs font-mono text-[#F5F5F2] tracking-wider uppercase mt-4 text-center">
+                      Live Order Tracking
+                    </span>
+                    <span className="text-[11px] text-[#888888] text-center mt-1 max-w-[260px]">
+                      Real-time status updates through Antrean, Pencucian, Detailing, and completion.
+                    </span>
                   </div>
                 </div>
               </div>
