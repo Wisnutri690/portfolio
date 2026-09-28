@@ -51,74 +51,53 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Architectural Blueprint Visual */}
+          {/* Right Column: Editorial Portrait Showcase (Non-Box Arch Design) */}
           <div className="lg:col-span-4 flex justify-start lg:justify-end animate-hero-visual w-full">
-            <div
-              className="w-full max-w-[340px] border border-white/[0.12] bg-[#0A0A0A]/40 p-6 relative font-mono text-xs select-none backdrop-blur-xs"
-              aria-hidden="true"
-            >
-              {/* Corner crosshairs */}
-              <span className="absolute -top-1.5 -left-1.5 text-white/30 text-[10px] leading-none">+</span>
-              <span className="absolute -top-1.5 -right-1.5 text-white/30 text-[10px] leading-none">+</span>
-              <span className="absolute -bottom-1.5 -left-1.5 text-white/30 text-[10px] leading-none">+</span>
-              <span className="absolute -bottom-1.5 -right-1.5 text-white/30 text-[10px] leading-none">+</span>
+            <div className="relative group w-full max-w-[320px] mx-auto lg:ml-auto">
+              {/* Subtle Ambient Glow behind the arch */}
+              <div
+                className="absolute -inset-1 rounded-t-full rounded-b-3xl bg-gradient-to-b from-white/[0.08] to-transparent blur-md opacity-40 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+                aria-hidden="true"
+              />
 
-              {/* Blueprint Header */}
-              <div className="flex items-center justify-between pb-4 border-b border-white/[0.08] text-[10px] tracking-widest text-[#666666] uppercase">
-                <span>SYS.ARCH // 01</span>
-                <span>WT.DEV</span>
-              </div>
+              {/* Editorial Arch Container */}
+              <div className="relative border border-white/[0.16] bg-[#0A0A0A] p-3 rounded-t-full rounded-b-3xl shadow-2xl transition-all duration-500 group-hover:border-white/30">
+                {/* Header Tag */}
+                <div className="flex items-center justify-between px-3 pt-3 pb-2 text-[10px] font-mono text-[#666666] uppercase tracking-widest">
+                  <span>PORTRAIT // 01</span>
+                  <span>WT.DEV</span>
+                </div>
 
-              {/* Blueprint Architecture Diagram */}
-              <div className="py-6 space-y-4">
-                {/* Node 1: Client Layer */}
-                <div className="border border-white/[0.1] p-3 bg-white/[0.02]">
-                  <div className="flex items-center justify-between text-[11px] text-[#F5F5F2] mb-1">
-                    <span>INTERFACE</span>
-                    <span className="text-[9px] text-[#666666]">01 / CLIENT</span>
-                  </div>
-                  <div className="text-[10px] text-[#A1A1A1] font-sans tracking-wide">
-                    React · React Native · TypeScript
+                {/* Arched Photo Frame */}
+                <div className="relative overflow-hidden rounded-t-full rounded-b-2xl bg-[#050505] border border-white/[0.08] aspect-[3/4]">
+                  <img
+                    src="/images/profile/wisnu-profile.jpg"
+                    alt="Wisnu Tri - Full Stack Developer"
+                    className="w-full h-full object-cover object-top grayscale contrast-[1.08] brightness-95 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
+                    loading="eager"
+                  />
+
+                  {/* Editorial Subtle Vignette Overlay */}
+                  <div
+                    className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-transparent to-black/20 pointer-events-none"
+                    aria-hidden="true"
+                  />
+
+                  {/* Floating Identity & Status Badge */}
+                  <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between px-3 py-1.5 rounded-full bg-[#0A0A0A]/85 border border-white/[0.12] backdrop-blur-md text-[10px] font-mono text-[#F5F5F2]">
+                    <span className="flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                      <span>Wisnu Tri</span>
+                    </span>
+                    <span className="text-[#A1A1A1] text-[9px] uppercase tracking-wider">Full Stack</span>
                   </div>
                 </div>
 
-                {/* Connecting Line */}
-                <div className="flex justify-center -my-2">
-                  <div className="w-px h-4 bg-white/20" />
+                {/* Technical Coordinates Footer */}
+                <div className="pt-3 pb-1 px-2 flex items-center justify-between text-[9px] font-mono text-[#666666] tracking-wider uppercase">
+                  <span>LAT -6.4025° LON 106.7942°</span>
+                  <span className="text-white/60">ACTIVE</span>
                 </div>
-
-                {/* Node 2: Server Layer */}
-                <div className="border border-white/[0.1] p-3 bg-white/[0.02]">
-                  <div className="flex items-center justify-between text-[11px] text-[#F5F5F2] mb-1">
-                    <span>SERVER & API</span>
-                    <span className="text-[9px] text-[#666666]">02 / SERVICE</span>
-                  </div>
-                  <div className="text-[10px] text-[#A1A1A1] font-sans tracking-wide">
-                    Node.js · Express · REST API · JWT
-                  </div>
-                </div>
-
-                {/* Connecting Line */}
-                <div className="flex justify-center -my-2">
-                  <div className="w-px h-4 bg-white/20" />
-                </div>
-
-                {/* Node 3: Data Layer */}
-                <div className="border border-white/[0.1] p-3 bg-white/[0.02]">
-                  <div className="flex items-center justify-between text-[11px] text-[#F5F5F2] mb-1">
-                    <span>DATA PERSISTENCE</span>
-                    <span className="text-[9px] text-[#666666]">03 / STORAGE</span>
-                  </div>
-                  <div className="text-[10px] text-[#A1A1A1] font-sans tracking-wide">
-                    PostgreSQL · Prisma ORM
-                  </div>
-                </div>
-              </div>
-
-              {/* Blueprint Footer Coordinates */}
-              <div className="pt-4 border-t border-white/[0.08] flex items-center justify-between text-[9px] text-[#666666] tracking-wider uppercase">
-                <span>LAT -6.4025° LON 106.7942°</span>
-                <span className="text-white/60">ACTIVE</span>
               </div>
             </div>
           </div>
