@@ -199,7 +199,7 @@ export default function Projects() {
                     <div className="flex flex-col items-center">
                       <div className="w-full max-w-[250px] sm:max-w-[270px]">
                         <img
-                          src="/images/projects/carwash/carwash-mobile-admin-transparent.png"
+                          src="/images/projects/carwash/carwash-mobile-admin-framed.png"
                           alt="Carwash Mobile Administrator app showing operational summary and active orders"
                           className="w-full h-auto object-contain block mx-auto drop-shadow-[0_20px_25px_rgba(0,0,0,0.85)]"
                           loading="lazy"
