@@ -171,46 +171,53 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="border border-white/[0.12] bg-[#0A0A0A] p-4 sm:p-6 transition-all duration-300 hover:border-white/25">
-                <div className="flex items-center justify-between border-b border-white/[0.08] pb-3 text-[10px] font-mono text-[#666666] uppercase tracking-wider mb-8">
+              <div className="border border-white/[0.12] bg-[#0A0A0A] p-2 sm:p-4 transition-all duration-300 hover:border-white/25">
+                <div className="flex items-center justify-between px-3 py-2 border-b border-white/[0.08] text-[10px] font-mono text-[#666666] uppercase tracking-wider mb-3">
                   <span>01.2 // CROSS-PLATFORM MOBILE APPLICATION</span>
-                  <span>REACT NATIVE · CUSTOMER PORTAL & ADMINISTRATOR</span>
+                  <span>REACT NATIVE · CUSTOMER PORTAL & ADMIN</span>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 max-w-2xl mx-auto items-start">
-                  <div className="flex flex-col items-center">
-                    <div className="border border-white/[0.08] bg-[#050505] p-2 w-full max-w-[280px] sm:max-w-[310px]">
-                      <img
-                        src="/images/projects/carwash/iPhone-14-PRO-localhost.png"
-                        alt="Carwash Mobile Customer Portal showing live tracking status for Ferrari SF90"
-                        className="w-full h-auto object-contain block mx-auto"
-                        loading="lazy"
-                      />
+                <div className="bg-[#050505] border border-white/[0.06] p-6 sm:p-10">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 max-w-2xl mx-auto items-end justify-center">
+                    <div className="flex flex-col items-center">
+                      <div className="w-full max-w-[250px] sm:max-w-[270px]">
+                        <img
+                          src="/images/projects/carwash/iPhone-14-PRO-localhost.png"
+                          alt="Carwash Mobile Customer Portal showing live tracking status for Ferrari SF90"
+                          className="w-full h-auto object-contain block mx-auto drop-shadow-[0_20px_25px_rgba(0,0,0,0.85)]"
+                          loading="lazy"
+                        />
+                      </div>
+                      <span className="text-xs font-mono text-[#F5F5F2] tracking-wider uppercase mt-4 text-center">
+                        Mobile Customer Portal
+                      </span>
+                      <span className="text-[11px] text-[#888888] text-center mt-1 max-w-[240px]">
+                        Customer live tracking status (Antrean, Pencucian, Detailing, Selesai) with vehicle selector.
+                      </span>
                     </div>
-                    <span className="text-xs font-mono text-[#F5F5F2] tracking-wider uppercase mt-4 text-center">
-                      Mobile Customer Portal
-                    </span>
-                    <span className="text-[11px] text-[#888888] text-center mt-1 max-w-[260px]">
-                      Customer live tracking status (Antrean, Pencucian, Detailing, Selesai) with vehicle selector and cashless payment.
-                    </span>
-                  </div>
 
-                  <div className="flex flex-col items-center">
-                    <div className="border border-white/[0.08] bg-[#050505] p-2 w-full max-w-[280px] sm:max-w-[310px]">
-                      <img
-                        src="/images/projects/carwash/carwash-mobile-admin.png"
-                        alt="Carwash Mobile Administrator app showing operational summary and active orders"
-                        className="w-full h-auto object-contain block mx-auto"
-                        loading="lazy"
-                      />
+                    <div className="flex flex-col items-center">
+                      <div className="w-full max-w-[250px] sm:max-w-[270px]">
+                        <img
+                          src="/images/projects/carwash/carwash-mobile-admin-transparent.png"
+                          alt="Carwash Mobile Administrator app showing operational summary and active orders"
+                          className="w-full h-auto object-contain block mx-auto drop-shadow-[0_20px_25px_rgba(0,0,0,0.85)]"
+                          loading="lazy"
+                        />
+                      </div>
+                      <span className="text-xs font-mono text-[#F5F5F2] tracking-wider uppercase mt-4 text-center">
+                        Mobile Administrator
+                      </span>
+                      <span className="text-[11px] text-[#888888] text-center mt-1 max-w-[240px]">
+                        Administrator operational summary, real-time active queues, unit counts, and order transaction status.
+                      </span>
                     </div>
-                    <span className="text-xs font-mono text-[#F5F5F2] tracking-wider uppercase mt-4 text-center">
-                      Mobile Administrator
-                    </span>
-                    <span className="text-[11px] text-[#888888] text-center mt-1 max-w-[260px]">
-                      Administrator operational summary, real-time active queues, unit counts, and order transaction status.
-                    </span>
                   </div>
+                </div>
+
+                <div className="px-3 py-2.5 mt-1 text-[11px] font-mono text-[#888888] flex flex-wrap items-center justify-between gap-2 border-t border-white/[0.04]">
+                  <span>Dual Mobile Workflow — Interactive client vehicle tracking & real-time administrative queue controls.</span>
+                  <span className="text-[#555555]">IOS & ANDROID</span>
                 </div>
               </div>
             </div>
@@ -305,28 +312,29 @@ export default function Projects() {
           </article>
 
           <article
-            data-reveal-id="project-watchlist"
+            data-reveal-id="project-queueless"
             className={`group border-t border-b border-white/[0.12] py-12 md:py-16 reveal-init ${
-              isVisible('project-watchlist') ? 'reveal-visible' : ''
+              isVisible('project-queueless') ? 'reveal-visible' : ''
             }`}
-            aria-labelledby="watchlist-title"
+            aria-labelledby="queueless-title"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
               <div className="lg:col-span-6 flex flex-col space-y-6">
                 <span className="section-label">
-                  03 / FRONTEND · REACT
+                  03 / MOBILE APP · REACT NATIVE
                 </span>
 
                 <h3
-                  id="watchlist-title"
+                  id="queueless-title"
                   className="font-editorial text-3xl sm:text-4xl text-[#F5F5F2] group-hover:text-white transition-colors duration-300 leading-tight"
                 >
-                  WatchList
+                  QueueLess — NEXA Bank Digital Queue
                 </h3>
 
                 <p className="text-[#A1A1A1] text-base md:text-lg leading-relaxed max-w-[540px]">
-                  A movie watchlist application for browsing, searching,
-                  and managing a personal collection of movies and shows.
+                  A cross-platform mobile queue management system for bank branches featuring
+                  camera QR code entry, dynamic branch context detection, real-time ticket tracking,
+                  and counter operator queue controls.
                 </p>
 
                 <div className="pt-2">
@@ -334,17 +342,31 @@ export default function Projects() {
                     Technologies
                   </span>
                   <p className="text-xs sm:text-sm text-[#A1A1A1] font-mono leading-relaxed">
-                    React · JavaScript · Vite · Tailwind CSS
+                    React Native · Expo SDK 57 · TypeScript · Expo Router · Supabase Realtime
                   </p>
                 </div>
 
                 <div className="pt-4 flex flex-wrap items-center gap-4">
                   <a
-                    href="https://github.com/Wisnutri690/Stage-2-Project-2-WatchList"
+                    href="https://queue.wisnutri.my.id"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-primary !py-2.5 !px-4 !text-xs tracking-wider group/link"
+                    aria-label="View QueueLess live web application"
+                  >
+                    <span>Live Web Portal</span>
+                    <ArrowUpRight
+                      size={14}
+                      className="transition-transform duration-200 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
+                      aria-hidden="true"
+                    />
+                  </a>
+                  <a
+                    href="https://github.com/Wisnutri690/Quequeless"
                     target="_blank"
                     rel="noreferrer"
                     className="btn-secondary !py-2.5 !px-4 !text-xs tracking-wider group/link"
-                    aria-label="View WatchList repository on GitHub"
+                    aria-label="View QueueLess repository on GitHub"
                   >
                     <span>Repository</span>
                     <ArrowUpRight
@@ -359,17 +381,51 @@ export default function Projects() {
               <div className="lg:col-span-6 w-full">
                 <div className="border border-white/[0.12] bg-[#0A0A0A] p-2 sm:p-3 relative overflow-hidden transition-all duration-300 group-hover:border-white/25">
                   <div className="flex items-center justify-between px-3 py-2 border-b border-white/[0.08] text-[10px] font-mono text-[#666666] uppercase tracking-wider mb-2">
-                    <span>APP // WATCHLIST DIRECTORY</span>
-                    <span>REACT + TAILWIND</span>
+                    <span>APP // DIGITAL QUEUE SYSTEM</span>
+                    <span>EXPO & SUPABASE REALTIME</span>
                   </div>
 
-                  <div className="overflow-hidden bg-[#050505] border border-white/[0.06]">
-                    <img
-                      src="/images/projects/watchlist/watchlist-home.png"
-                      alt="WatchList movie collection interface"
-                      className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.01]"
-                      loading="lazy"
-                    />
+                  <div className="overflow-hidden bg-[#050505] border border-white/[0.06] p-4 sm:p-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl mx-auto items-end justify-center">
+                      <div className="flex flex-col items-center">
+                        <div className="w-full max-w-[210px] sm:max-w-[230px]">
+                          <img
+                            src="/images/projects/queueless/queueless-customer-ticket-transparent.png"
+                            alt="QueueLess Mobile Customer Portal showing active waiting ticket and live queue progress"
+                            className="w-full h-auto object-contain block mx-auto drop-shadow-[0_20px_25px_rgba(0,0,0,0.85)]"
+                            loading="lazy"
+                          />
+                        </div>
+                        <span className="text-xs font-mono text-[#F5F5F2] tracking-wider uppercase mt-3 text-center">
+                          Customer Ticket Portal
+                        </span>
+                        <span className="text-[11px] text-[#888888] text-center mt-1 max-w-[220px]">
+                          Live ticket progress with stepper indicator and turn notifications.
+                        </span>
+                      </div>
+
+                      <div className="flex flex-col items-center">
+                        <div className="w-full max-w-[210px] sm:max-w-[230px]">
+                          <img
+                            src="/images/projects/queueless/queueless-staff-console.png"
+                            alt="QueueLess Staff Counter Operator console with queue call controls"
+                            className="w-full h-auto object-contain block mx-auto drop-shadow-[0_20px_25px_rgba(0,0,0,0.85)]"
+                            loading="lazy"
+                          />
+                        </div>
+                        <span className="text-xs font-mono text-[#F5F5F2] tracking-wider uppercase mt-3 text-center">
+                          Staff Operator Console
+                        </span>
+                        <span className="text-[11px] text-[#888888] text-center mt-1 max-w-[220px]">
+                          Teller queue call triggers, service timers, and branch QR routing.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="px-3 py-2.5 mt-1 text-[11px] font-mono text-[#888888] flex flex-wrap items-center justify-between gap-2 border-t border-white/[0.04]">
+                    <span>Bank Queue Architecture — QR-based ticket issuance, live Supabase sync, and counter controls.</span>
+                    <span className="text-[#555555]">PROD DEPLOYED</span>
                   </div>
                 </div>
               </div>

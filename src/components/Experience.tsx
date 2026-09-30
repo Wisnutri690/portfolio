@@ -1,9 +1,16 @@
 import { useEffect, useRef, useState } from 'react'
+import { ArrowUpRight, X, ZoomIn } from 'lucide-react'
 
 interface JourneyMedia {
   src: string
   alt: string
   caption: string
+}
+
+interface CertificationCredential {
+  name: string
+  issuer: string
+  verifyUrl?: string
 }
 
 interface JourneyItem {
@@ -16,6 +23,7 @@ interface JourneyItem {
   focus?: string
   meta?: string
   media?: JourneyMedia[]
+  credentials?: CertificationCredential[]
 }
 
 const JOURNEY_ITEMS: JourneyItem[] = [
@@ -24,15 +32,50 @@ const JOURNEY_ITEMS: JourneyItem[] = [
     period: '2025 — PRESENT',
     tag: 'DEVELOPMENT',
     title: 'Full Stack Development',
-    institution: 'DumbWays Bootcamp & Independent Development',
+    institution: 'DumbWays Indonesia & Independent Development',
     description:
-      'Developing full-stack web and mobile applications through structured learning, hands-on projects, and independent development.',
-    focus: 'React · TypeScript · Node.js · Express · PostgreSQL · Prisma · React Native',
+      'Developing full-stack web and mobile applications from architectural design to deployment. Engineered REST APIs, state management, and database schemas using React, React Native, TypeScript, Node.js, Express, PostgreSQL, and Prisma.',
+    focus: 'React · React Native · TypeScript · Node.js · Express · PostgreSQL · Prisma',
+  },
+  {
+    id: 'certifications',
+    period: '2025',
+    tag: 'CREDENTIALS',
+    title: 'Licenses & Certifications',
+    institution: 'HackerRank & DumbWays Indonesia',
+    description:
+      'Verified technical credentials demonstrating competitive proficiency in algorithmic problem solving, core JavaScript, and full-stack software development.',
+    credentials: [
+      {
+        name: 'HackerRank — JavaScript (Intermediate) Certificate',
+        issuer: 'HackerRank',
+        verifyUrl: 'https://www.hackerrank.com/certificates/cc13197889ba',
+      },
+      {
+        name: 'HackerRank — JavaScript (Basic) Certificate',
+        issuer: 'HackerRank',
+        verifyUrl: 'https://www.hackerrank.com/certificates/002461e1c576',
+      },
+      {
+        name: 'Fundamental FullStack (Top 20 of 2,000 Candidates)',
+        issuer: 'DumbWays Indonesia',
+      },
+    ],
     media: [
+      {
+        src: '/images/experience/hackerrank-javascript-intermediate.png',
+        alt: 'HackerRank Certificate of Accomplishment - JavaScript (Intermediate) for Wisnu Triandika',
+        caption: 'HackerRank · JavaScript (Intermediate)',
+      },
       {
         src: '/images/experience/hackerrank-javascript-basic.jpg',
         alt: 'HackerRank Certificate of Accomplishment - JavaScript (Basic) for Wisnu Triandika',
         caption: 'HackerRank · JavaScript (Basic)',
+      },
+      {
+        src: '/images/experience/dumbways-top-20.png',
+        alt: 'Sertifikat Lolos Seleksi Bootcamp Dumbways Indonesia Top 20 dari 2000 Peserta',
+        caption: 'DumbWays · Top 20 Candidates',
       },
     ],
   },
@@ -40,10 +83,10 @@ const JOURNEY_ITEMS: JourneyItem[] = [
     id: 'internship',
     period: '2025',
     tag: 'INTERNSHIP',
-    title: 'Internship / PKL',
-    institution: 'Land Government Office',
+    title: 'IT Support Intern',
+    institution: 'Kantor Pertanahan (Land Government Office)',
     description:
-      'Supported administrative data tasks using computers, including taking notes and scanning customer documents with office equipment.',
+      'Supported IT administrative workflows and computer equipment maintenance. Handled document scanning, digital archiving, and data organization using office network systems, computers, and scanners.',
     media: [
       {
         src: '/images/experience/pkl-activity-wisnu.jpg',
@@ -59,19 +102,20 @@ const JOURNEY_ITEMS: JourneyItem[] = [
   },
   {
     id: 'education',
-    period: '2025',
+    period: '2022 — 2025',
     tag: 'EDUCATION',
     title: 'SMK Itikurih Hibarna',
-    institution: 'TKJ / Computer & Network Engineering',
+    institution: 'Computer and Network Engineering (TKJ)',
     description:
       'Studied computer hardware, fiber optic networking, and MikroTik networking fundamentals.',
-    meta: 'Graduated: 14 May 2025',
+    meta: 'Graduated: May 2025',
   },
 ]
 
 export default function Experience() {
   const sectionRef = useRef<HTMLElement>(null)
   const [visibleItems, setVisibleItems] = useState<Record<string, boolean>>({})
+  const [selectedMedia, setSelectedMedia] = useState<JourneyMedia | null>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -140,31 +184,52 @@ export default function Experience() {
                 isVisible('journey-intro') ? 'reveal-visible' : ''
               }`}
             >
-              My path started with computer networks and hardware, then expanded
-              into building web and mobile applications across the full stack.
+              Building on an engineering foundation from Computer and Network
+              Engineering to designing high-performance web and mobile
+              architectures.
             </p>
+
+            <div
+              data-reveal-id="journey-meta"
+              className={`pt-4 border-t border-white/[0.08] max-w-[540px] reveal-init ${
+                isVisible('journey-meta') ? 'reveal-visible' : ''
+              }`}
+            >
+              <span className="text-xs font-mono text-[#666666] tracking-wider uppercase block mb-2">
+                Core Philosophy
+              </span>
+              <p className="text-xs sm:text-sm text-[#888888] leading-relaxed">
+                Disciplined engineering, rigorous type safety, responsive performance,
+                and user-centric design across the full software lifecycle.
+              </p>
+            </div>
           </div>
 
-          <div className="lg:col-span-7 flex flex-col border-t border-white/[0.12]">
+          <div className="lg:col-span-7 flex flex-col space-y-12">
             {JOURNEY_ITEMS.map((item, index) => (
               <article
                 key={item.id}
                 data-reveal-id={`journey-item-${item.id}`}
-                className={`py-8 md:py-10 border-b border-white/[0.08] last:border-b-0 reveal-init ${
+                className={`relative pl-8 md:pl-10 border-l border-white/[0.12] reveal-init ${
                   isVisible(`journey-item-${item.id}`) ? 'reveal-visible' : ''
                 }`}
-                style={{ transitionDelay: `${index * 90}ms` }}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className="flex items-center justify-between gap-4 mb-3">
-                  <span className="font-mono text-xs tracking-wider text-[#A1A1A1]">
+                <div
+                  className="absolute -left-[5px] top-1.5 w-2 h-2 rounded-full bg-[#333333] border border-[#050505]"
+                  aria-hidden="true"
+                />
+
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="font-mono text-xs text-[#666666] tracking-wider">
                     {item.period}
                   </span>
-                  <span className="text-[10px] tracking-[0.18em] uppercase text-[#666666] border border-white/[0.1] px-2 py-0.5 rounded-[2px] font-mono">
+                  <span className="text-[10px] uppercase font-mono tracking-widest px-2 py-0.5 border border-white/[0.08] text-[#888888] bg-[#0A0A0A]">
                     {item.tag}
                   </span>
                 </div>
 
-                <h3 className="font-editorial text-2xl md:text-3xl text-[#F5F5F2] font-medium leading-snug">
+                <h3 className="text-xl md:text-2xl font-semibold text-[#F5F5F2] mt-2">
                   {item.title}
                 </h3>
 
@@ -194,22 +259,59 @@ export default function Experience() {
                   </div>
                 )}
 
+                {item.credentials && item.credentials.length > 0 && (
+                  <div className="pt-4 space-y-2 max-w-[580px]">
+                    {item.credentials.map((cred) => (
+                      <div
+                        key={cred.name}
+                        className="flex flex-col sm:flex-row sm:items-center justify-between p-3 border border-white/[0.08] bg-[#0A0A0A] hover:border-white/20 transition-all duration-200 gap-2"
+                      >
+                        <div className="flex flex-col">
+                          <span className="text-xs sm:text-sm font-medium text-[#F5F5F2]">
+                            {cred.name}
+                          </span>
+                          <span className="text-[10px] font-mono text-[#888888] mt-0.5">
+                            {cred.issuer}
+                          </span>
+                        </div>
+                        {cred.verifyUrl && (
+                          <a
+                            href={cred.verifyUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-1 text-[11px] text-[#A1A1A1] hover:text-white font-mono transition-colors self-start sm:self-auto shrink-0 border border-white/[0.1] px-2 py-1 rounded-[2px]"
+                          >
+                            <span>Verify</span>
+                            <ArrowUpRight size={11} />
+                          </a>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+
                 {item.media && item.media.length > 0 && (
-                  <div className="pt-5 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  <div className="pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {item.media.map((img) => (
                       <div
                         key={img.src}
-                        className="border border-white/[0.1] bg-[#0A0A0A] p-1.5 overflow-hidden group/media hover:border-white/25 transition-all duration-300"
+                        onClick={() => setSelectedMedia(img)}
+                        className="border border-white/[0.12] bg-[#0A0A0A] p-2.5 overflow-hidden group/media hover:border-white/30 transition-all duration-300 cursor-pointer"
+                        title="Click to view full size"
                       >
-                        <div className="overflow-hidden bg-[#050505] aspect-[4/3] flex items-center justify-center">
+                        <div className="relative overflow-hidden bg-[#050505] border border-white/[0.06] flex items-center justify-center p-2 min-h-[190px] sm:min-h-[220px]">
                           <img
                             src={img.src}
                             alt={img.alt}
-                            className="w-full h-full object-cover transition-transform duration-300 group/media:scale-105"
+                            className="w-full h-auto max-h-[260px] sm:max-h-[320px] object-contain transition-transform duration-300 group-hover/media:scale-[1.02]"
                             loading="lazy"
                           />
+                          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover/media:opacity-100 transition-opacity duration-200 flex items-center justify-center gap-1.5 text-xs text-white font-mono">
+                            <ZoomIn size={14} />
+                            <span>Preview</span>
+                          </div>
                         </div>
-                        <span className="text-[9px] font-mono text-[#666666] tracking-wider uppercase block mt-1.5 px-0.5 truncate">
+                        <span className="text-[11px] font-mono text-[#CCCCCC] tracking-wider uppercase block mt-2.5 px-1 truncate">
                           {img.caption}
                         </span>
                       </div>
@@ -221,6 +323,37 @@ export default function Experience() {
           </div>
         </div>
       </div>
+
+      {selectedMedia && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md transition-opacity duration-200"
+          onClick={() => setSelectedMedia(null)}
+        >
+          <div
+            className="relative max-w-4xl w-full bg-[#0A0A0A] border border-white/20 p-3 sm:p-5 shadow-2xl rounded-[2px]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between pb-3 mb-3 border-b border-white/10 text-xs font-mono text-[#E0E0E0]">
+              <span className="truncate pr-4 uppercase tracking-wider">{selectedMedia.caption}</span>
+              <button
+                type="button"
+                onClick={() => setSelectedMedia(null)}
+                className="p-1 text-[#888888] hover:text-white transition-colors"
+                aria-label="Close modal"
+              >
+                <X size={20} />
+              </button>
+            </div>
+            <div className="bg-[#050505] border border-white/[0.06] p-2 sm:p-4 flex items-center justify-center max-h-[80vh] overflow-auto">
+              <img
+                src={selectedMedia.src}
+                alt={selectedMedia.alt}
+                className="w-full h-auto max-h-[75vh] object-contain rounded-[1px]"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
